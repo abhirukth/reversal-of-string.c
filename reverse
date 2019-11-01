@@ -1,16 +1,25 @@
 #include <stdio.h>
 #include <string.h>
- 
+void strrev(char arr[],int l)
+{
+int i,j=100;
+char rev[100];
+for(i=0;i<l;i++)
+ {
+   rev[j--]=arr[i];
+  }
+printf("the reversed string is:");
+printf("%s",rev);
+
+} 
 int main()
 {
    char arr[100];
  
    printf("Enter a string to reverse\n");
    gets(arr);
- 
-   strrev(arr);
- 
-   printf("Reverse of the string is \n%s\n", arr);
+   l=strlen(arr); 
+   strrev(arr,l);
  
    return 0;
 }
